@@ -119,17 +119,8 @@ body {
   background-color: #a670cf;
 }
 
-.be-dealer {
-  background-color: #fff;
-  color: var(--base);
+.plus {
   padding: 7em 0;
-}
-
-.be-dealer__title {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 1em;
 }
 
 .plus__icon {
@@ -138,12 +129,24 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  width: 6em;
+  width: 100%;
   height: 6em;
 }
 
 .plus__icon_simple {
   background-image: url(../img/icons/plus_1.svg);
+}
+
+.plus__icon_russia {
+  background-image: url(../img/icons/plus_2.svg);
+}
+
+.plus__icon_cool {
+  background-image: url(../img/icons/plus_3.svg);
+}
+
+.plus__icon_points {
+  background-image: url(../img/icons/plus_4.svg);
 }
 
 .plus__badge {
@@ -154,4 +157,31 @@ body {
   font-size: 1.5rem;
   border-radius: .4em;
   padding: 0 .7em;
+}
+
+.plus__badge_red {
+  background-color: var(--red);
+}
+
+.plus__badge_green {
+  background-color: var(--green);
+}
+
+.be-dealer {
+  background-color: #fff;
+  color: var(--base);
+}
+
+.be-dealer__title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.region {
+  background: url(../img/bg-2.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
 }
