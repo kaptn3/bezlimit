@@ -81,6 +81,10 @@ body {
   font-weight: 300;
 }
 
+.numbers {
+  padding-bottom: 4em;
+}
+
 .numbers__phone {
   margin: 0 auto;
   display: block;
@@ -113,4 +117,41 @@ body {
   height: 1px;
   width: 7em;
   background-color: #a670cf;
+}
+
+.be-dealer {
+  background-color: #fff;
+  color: var(--base);
+  padding: 7em 0;
+}
+
+.be-dealer__title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.plus__icon {
+  display: block;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 6em;
+  height: 6em;
+}
+
+.plus__icon_simple {
+  background-image: url(../img/icons/plus_1.svg);
+}
+
+.plus__badge {
+  display: inline-block;
+  margin: 1em auto;
+  background-color: var(--base);
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: .4em;
+  padding: 0 .7em;
 }
