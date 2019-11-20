@@ -185,3 +185,8 @@ body {
   background-attachment: fixed;
   color: black;
 }
+
+.limits {
+  background-color: #fff;
+  color: var(--base);
+}
