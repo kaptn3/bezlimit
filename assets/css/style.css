@@ -190,3 +190,10 @@ body {
   background-color: #fff;
   color: var(--base);
 }
+
+.search {
+  color: black;
+  background: url(../img/bg-3.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
