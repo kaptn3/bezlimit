@@ -1,3 +1,11 @@
+:root {
+  --base: #6833ad;
+  --orange-light: #f6af47;
+  --orange: #f6af47;
+  --red: #ae2b55;
+  --green: #388fad;
+}
+
 *,
 *::after,
 *::before {
@@ -14,11 +22,6 @@ a {
 a:active,
 a:visited {
   color: inherit;
-}
-
-a:hover,
-a:focus {
-  color: var(--green);
 }
 
 img {
@@ -41,10 +44,35 @@ button {
 
 html {
   font-size: 24px;
+  color: #fff;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  line-height: 2;
+  background-color: var(--base);
+}
+
+.header {
+  text-align: center;
+  padding-top: 2em;
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+.header__logo {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+.header__offer {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1em;
+  display: inline-block;
+}
+
+.header__title {
+  font-weight: 300;
 }
