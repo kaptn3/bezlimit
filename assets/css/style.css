@@ -311,7 +311,7 @@ body {
 .carousel__box {
   width: fit-content;
   display: flex;
-  transform: translateX(-60.5rem);
+  transform: translateX(-25.5rem);
   transition: .5s transform;
 }
 
