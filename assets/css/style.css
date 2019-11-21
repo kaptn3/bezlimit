@@ -311,7 +311,10 @@ body {
 .carousel__box {
   width: fit-content;
   display: flex;
-  transform: translateX(-25.5rem);
+  transform: translateX(-60.5rem);
+}
+
+.carousel__box_animate {
   transition: .5s transform;
 }
 
@@ -320,6 +323,10 @@ body {
   height: 18.75rem;
   opacity: .5;
   transition: .5s opacity;
+}
+
+.carousel__item_animate {
+  
 }
 
 .carousel__item img {
