@@ -1,5 +1,6 @@
-const countClonedSlides = 2;
-let active = countClonedSlides;
+const countClonedPrepend = 1;
+const countClonedAppend = 2;
+let active = countClonedPrepend;
 
 const createSlide = (i, items) => {
   const elm = items[i].cloneNode(true);
@@ -9,7 +10,6 @@ const createSlide = (i, items) => {
 }
 
 const cloneSlides = (box, items) => {
-  box.prepend(createSlide(items.length - 1, items));
   box.prepend(createSlide(items.length - 1, items));
   box.append(createSlide(0, items));
   box.append(createSlide(0, items));
@@ -27,7 +27,7 @@ const moveBoxHandle = (box) => {
 const nextSlide = () => {
   const box = document.querySelector('.carousel__box');
   const items = document.querySelectorAll('.carousel__item');
-  const lastIndex = items.length - countClonedSlides;
+  const lastIndex = items.length - countClonedAppend;
   for (let i = 0; i < items.length; i++) {
     if (items[i].classList.contains('carousel__item_active')) active = i;
     items[i].removeAttribute('style');
@@ -40,9 +40,9 @@ const nextSlide = () => {
     box.classList.remove('carousel__box_animate');
     if (active === lastIndex) {
       items[active].style.transition = 'none';
-      items[countClonedSlides].style.transition = 'none';
-      classHandle(items[active], items[countClonedSlides]);
-      active = countClonedSlides;
+      items[countClonedPrepend].style.transition = 'none';
+      classHandle(items[active], items[countClonedPrepend]);
+      active = countClonedPrepend;
       moveBoxHandle(box);
     }
   }, 500);
@@ -55,7 +55,22 @@ const initCarousel = () => {
   const items = document.querySelectorAll('.carousel__item');
   cloneSlides(box, items);
   const interval = setInterval(nextSlide, 4000);
+  moveBoxHandle(box);
 }
 
+const openTariff = (span, more) => {
+  more.classList.toggle('phone__more_show');
+}
+
+const initClickTariffs = () => {
+  const items = document.querySelectorAll('.phone__item');
+  for (let i = 0; i < items.length; i++) {
+    const span = items[i].querySelector('.phone__number');
+    const bookBtn = items[i].querySelector('.phone__book');
+    const more = items[i].querySelector('.phone__more');
+    span.addEventListener('click', () => { openTariff(span, more) });
+  }
+}
 
 document.addEventListener('DOMContentLoaded', initCarousel);
+document.addEventListener('DOMContentLoaded', initClickTariffs);
