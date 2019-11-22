@@ -234,6 +234,11 @@ body {
   text-align: center;
   font-size: 1rem;
   padding: 0;
+  position: relative;
+}
+
+.phone__menu li {
+  z-index: 2;
 }
 
 .phone__menu-item {
@@ -242,6 +247,21 @@ body {
   flex: 1;
   padding-top: .8rem;
   padding-bottom: 1.8rem;
+  cursor: pointer;
+  color: var(--base);
+  display: block;
+}
+
+.phone__menu-item-active {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 220px;
+  top: 0;
+  left: 0;
+  transition: .2s left;
+  background-color: #f2e2fd;
 }
 
 .phone__menu-item::before {
@@ -251,10 +271,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 1.6rem;
-}
-
-.phone__menu-item a {
-  color: var(--base);
 }
 
 .phone__menu-item_phones::before {

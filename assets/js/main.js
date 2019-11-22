@@ -72,5 +72,16 @@ const initClickTariffs = () => {
   }
 }
 
+const initPhoneMenu = () => {
+  const links = document.querySelectorAll('.phone__menu-item');
+  const div = document.querySelector('.phone__menu-item-active');
+  for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', () => {
+      div.style.left = `${i * links[i].offsetWidth}px`;
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', initCarousel);
 document.addEventListener('DOMContentLoaded', initClickTariffs);
+document.addEventListener('DOMContentLoaded', initPhoneMenu);
