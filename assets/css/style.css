@@ -88,6 +88,7 @@ body {
 
 .numbers__phone {
   margin: 0 auto;
+  margin-bottom: 3.5rem;
   max-width: 35.8rem;
   height: 1711px;
   background: url(../img/iphone_11.png) no-repeat center;
