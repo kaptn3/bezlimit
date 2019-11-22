@@ -228,6 +228,7 @@ body {
   overflow-x: auto;
   width: 100%;
   background-color: #fff;
+  padding-bottom: 15px;
   margin-bottom: -17px;
   flex-shrink: 0;
 }

@@ -62,11 +62,19 @@ const openTariff = (more) => {
   more.classList.toggle('phone__more_show');
 }
 
-const openModal = (phone) => {
+const openModal = (phone, e) => {
   const modal = document.querySelector('.modal');
-  modal.classList.toggle('modal_show');
   const phoneInput = modal.querySelector('input[name=phone-book]');
   phoneInput.value = phone;
+
+  // click out modal
+  if (e) {
+    if (e.target.classList.contains('modal')) {
+      modal.classList.remove('modal_show');
+    }
+  } else {
+    modal.classList.toggle('modal_show');
+  }
 }
 
 const initClickTariffs = () => {
@@ -76,7 +84,7 @@ const initClickTariffs = () => {
     const bookBtn = items[i].querySelector('.phone__book');
     const more = items[i].querySelector('.phone__more');
     span.addEventListener('click', () => { openTariff(more) });
-    bookBtn.addEventListener('click', () => { console.log('ddd'); openModal(span.innerText); });
+    bookBtn.addEventListener('click', () => { openModal(span.innerText); });
   }
 }
 
