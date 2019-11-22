@@ -283,40 +283,16 @@ body {
   background-image: url(../img/icons/icon-phones.png);
 }
 
-.phone__menu-item_pay::before {
-  background-image: url(../img/icons/icon-coin.png);
-}
-
 .phone__menu-item_delivery::before {
   background-image: url(../img/icons/icon-delivery.png);
-}
-
-.phone__menu-item_internet::before {
-  background-image: url(../img/icons/icon-internet.png);
-}
-
-.phone__menu-item_book::before {
-  background-image: url(../img/icons/icon-phone-booked.png);
-}
-
-.phone__menu-item_activation::before {
-  background-image: url(../img/icons/icon-activations.png);
 }
 
 .phone__menu-item_bonus::before {
   background-image: url(../img/icons/icon-bonus.png);
 }
 
-.phone__menu-item_info::before {
-  background-image: url(../img/icons/icon-info.png);
-}
-
 .phone__menu-item_profile::before {
   background-image: url(../img/icons/icon-profile.png);
-}
-
-.phone__menu-item_support::before {
-  background-image: url(../img/icons/icon-support.png);  
 }
 
 .plus {
