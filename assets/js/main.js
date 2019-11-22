@@ -21,7 +21,8 @@ const classHandle = (prev, current) => {
 }
 
 const moveBoxHandle = (box) => {
-  box.style.transform = `translateX(${-25.5 - 35 * (active - 1)}rem)`;
+  const size = document.body.clientWidth > 1296 ? `${-25.5 - 35 * (active - 1)}rem` : `${-100 * (active)}vw`;
+  box.style.transform = `translateX(${size})`;
 }
 
 const nextSlide = () => {

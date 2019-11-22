@@ -393,7 +393,6 @@ body {
 }
 
 .get-form__form {
-  margin-bottom: 1.2em;
   text-align: left;
 }
 
@@ -420,6 +419,8 @@ body {
   text-align: left;
   display: block;
   font-weight: 300;
+  margin-top: 1.2em;
+  line-height: 1;
 }
 
 .get-form__privacy-link {
