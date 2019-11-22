@@ -135,7 +135,6 @@ body {
   height: 100%;
   border-radius: 3rem;
   overflow: hidden;
-  padding: 0 1.5rem;
 }
 
 .phone__bar {
@@ -147,7 +146,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.1rem 0;
+  padding: 1.1rem 1.5rem;
 }
 
 .phone__logotype {
@@ -165,6 +164,7 @@ body {
   text-align: left;
   font-size: 18px;
   font-weight: 400;
+  padding: 0 1.5rem;
 }
 
 .phone__number {
@@ -218,6 +218,83 @@ body {
 
 .phone__more_show {
   display: block;
+}
+
+.phone__menu-box {
+  overflow-x: auto;
+  width: 100%;
+  background-color: #fff;
+}
+
+.phone__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.phone__menu-item {
+  border-right: 1px solid var(--base);
+  min-width: 220px;
+  flex: 1;
+  padding-top: .8rem;
+  padding-bottom: 1.8rem;
+}
+
+.phone__menu-item::before {
+  content: '';
+  display: block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1.6rem;
+}
+
+.phone__menu-item a {
+  color: var(--base);
+}
+
+.phone__menu-item_phones::before {
+  background-image: url(../img/icons/icon-phones.png);
+}
+
+.phone__menu-item_pay::before {
+  background-image: url(../img/icons/icon-coin.png);
+}
+
+.phone__menu-item_delivery::before {
+  background-image: url(../img/icons/icon-delivery.png);
+}
+
+.phone__menu-item_internet::before {
+  background-image: url(../img/icons/icon-internet.png);
+}
+
+.phone__menu-item_book::before {
+  background-image: url(../img/icons/icon-phone-booked.png);
+}
+
+.phone__menu-item_activation::before {
+  background-image: url(../img/icons/icon-activations.png);
+}
+
+.phone__menu-item_bonus::before {
+  background-image: url(../img/icons/icon-bonus.png);
+}
+
+.phone__menu-item_info::before {
+  background-image: url(../img/icons/icon-info.png);
+}
+
+.phone__menu-item_profile::before {
+  background-image: url(../img/icons/icon-profile.png);
+}
+
+.phone__menu-item_support::before {
+  background-image: url(../img/icons/icon-support.png);  
 }
 
 .plus {
