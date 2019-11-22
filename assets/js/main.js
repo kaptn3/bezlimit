@@ -137,6 +137,16 @@ const submitBookForm = (e) => {
   e.target.innerHTML = 'Заявка отправлена. Мы свяжемся с Вами в ближайшее рабочее время!';
 }
 
+const submitWantDealerForm = (e) => {
+  e.preventDefault();
+  const btn = e.target.querySelector('.get-form__btn');
+  btn.innerText = 'Заявка отправлена!';
+
+  setTimeout(() => {
+    btn.innerText = 'Хочу стать дилером';
+  }, 3000);
+}
+
 document.addEventListener('DOMContentLoaded', initCarousel);
 document.addEventListener('DOMContentLoaded', initClickTariffs);
 document.addEventListener('DOMContentLoaded', initPhoneMenu);

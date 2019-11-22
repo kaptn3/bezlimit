@@ -96,9 +96,9 @@
   <section class="get-form">
     <h2 class="get-form__title">Получи доступ к Базе номеров прямо сейчас</h2>
     <span class="get-form__action-text">Введи имя и номер телефона и получи логин и пароль</span>
-    <form class="get-form__form">
-      <input type="text" name="name" class="get-form__input" placeholder="Ваше имя">
-      <input type="phone" name="phone" class="get-form__input" placeholder="Ваш номер">
+    <form class="get-form__form" onsubmit="submitWantDealerForm(event)">
+      <input type="text" name="name" class="get-form__input" placeholder="Ваше имя" required>
+      <input type="phone" name="phone" class="get-form__input" placeholder="Ваш номер" required>
       <button class="get-form__btn">Хочу стать дилером</button>
     </form>
     <small class="get-form__small"><sup>*</sup>Оставляя заявку подтверждаю, что я ознакомлен и <a href="privacy.pdf" target="_blank" class="get-form__privacy-link">согласен на обработку персональных данных</a>.</small>
