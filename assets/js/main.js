@@ -62,25 +62,59 @@ const openTariff = (more) => {
   more.classList.toggle('phone__more_show');
 }
 
+const constructorModal = (phone) => {
+  let note = '', inputUserPhone = '';
+
+  if (phone) {
+    inputUserPhone = `<input class="book-form__input" type="text" name="phone-book" value="${phone}" hidden>`;
+    note = '<span class="book-form__note">Для бронирования этого номера оставьте ваше имя и телефон.</span>';
+  } else {
+    inputUserPhone = '<input class="book-form__input" type="text" name="phone-text" placeholder="Ваш номер" required>';
+  }
+
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+  modal.setAttribute('onclick', 'openModal("", event)');
+  modal.innerHTML = `<div class="modal" onclick="">
+    <div class="modal__inner">
+      <div class="modal__close" onclick="openModal()">
+        <img src="assets/img/icons/close.svg">
+      </div>
+      <form class="book-form" onsubmit="submitBookForm(event)">
+        ${note}
+        <input class="book-form__input" type="text" name="name" placeholder="Ваше имя" required>
+        <input class="book-form__input" type="text" name="phone" placeholder="Ваш номер" required>
+        ${inputUserPhone}
+        <button class="book-form__btn">Отправить заявку</button>
+        <small class="book-form__small"><sup>*</sup> Настоящим подтверждаю, что я ознакомлен и <a href="privacy.pdf" target="_blank">согласен на обработку персональных данных</a>.</small>
+      </form>
+    </div>
+  </div>`;
+
+  return modal;
+}
+
 const openModal = (phone, e) => {
   const modal = document.querySelector('.modal');
 
   // click out modal
   if (e) {
     if (e.target.classList.contains('modal')) {
-      modal.classList.remove('modal_show');
+      modal.remove();
     }
   } else {
-    modal.classList.toggle('modal_show');
-    const phoneInput = modal.querySelector('input[name=phone-book]');
-    phoneInput.value = phone;
+    if (modal) {
+      modal.remove();
+    } else {
+      document.body.append(constructorModal(phone));
+    }
   }
 }
 
 const initClickTariffs = () => {
   const items = document.querySelectorAll('.phone__item');
   for (let i = 0; i < items.length; i++) {
-    const span = items[i].querySelector('.phone__name-tariff');
+    const span = items[i].querySelector('.phone__number');
     const bookBtn = items[i].querySelector('.phone__book');
     const more = items[i].querySelector('.phone__more');
     span.addEventListener('click', () => { openTariff(more) });
