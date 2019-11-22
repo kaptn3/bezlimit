@@ -64,8 +64,6 @@ const openTariff = (more) => {
 
 const openModal = (phone, e) => {
   const modal = document.querySelector('.modal');
-  const phoneInput = modal.querySelector('input[name=phone-book]');
-  phoneInput.value = phone;
 
   // click out modal
   if (e) {
@@ -74,6 +72,8 @@ const openModal = (phone, e) => {
     }
   } else {
     modal.classList.toggle('modal_show');
+    const phoneInput = modal.querySelector('input[name=phone-book]');
+    phoneInput.value = phone;
   }
 }
 
@@ -96,6 +96,11 @@ const initPhoneMenu = () => {
       div.style.left = `${i * links[i].offsetWidth}px`;
     });
   }
+}
+
+const submitBookForm = (e) => {
+  e.preventDefault();
+  e.target.innerHTML = 'Заявка отправлена. Мы свяжемся с Вами в ближайшее рабочее время!';
 }
 
 document.addEventListener('DOMContentLoaded', initCarousel);
