@@ -210,6 +210,7 @@ body {
   border: 1px solid #fff;
   padding: .5rem 1rem;
   font-size: inherit;
+  cursor: pointer;
 }
 
 .phone__more {
@@ -622,4 +623,93 @@ body {
 
 .footer__social_vk:before {
   background-image: url(../img/icons/vk.svg);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal_show {
+  display: flex;
+}
+
+.modal__inner {
+  width: 482px;
+  background-color: #441e70;
+  border: 1px solid #b761ed;
+  margin: auto;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.modal__close {
+  background-color: #6833ad;
+  height: 2rem;
+  text-align: right;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.book-form {
+  padding: 1rem 1.3rem;
+}
+
+.book-form__input {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: .4rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.book-form__input[hidden] {
+  display: none;
+}
+
+.book-form__note {
+  font-size: 18px;
+  color: #c270e8;
+  padding: 0 1.8rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.book-form__btn {
+  text-transform: uppercase;
+  background: linear-gradient(0deg, #844bf6, #dc87f9);
+  font-weight: 400;
+  display: inline-block;
+  padding: .5rem 1.3rem;
+  border-radius: 2em;
+  margin-top: 1rem;
+}
+
+.book-form__small {
+  font-weight: 300;
+  font-size: 14px;
+  display: block;
+  line-height: 1;
+  margin: 1rem;
+}
+
+.book-form__small a {
+  opacity: .5;
+  text-decoration: underline;
+  color: inherit;
+  transition: .3s opacity;
+}
+
+.book-form__small a:hover,
+.book-form__small a:focus {
+  opacity: 1;
 }

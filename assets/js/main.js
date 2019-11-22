@@ -58,8 +58,15 @@ const initCarousel = () => {
   moveBoxHandle(box);
 }
 
-const openTariff = (span, more) => {
+const openTariff = (more) => {
   more.classList.toggle('phone__more_show');
+}
+
+const openModal = (phone) => {
+  const modal = document.querySelector('.modal');
+  modal.classList.toggle('modal_show');
+  const phoneInput = modal.querySelector('input[name=phone-book]');
+  phoneInput.value = phone;
 }
 
 const initClickTariffs = () => {
@@ -68,7 +75,8 @@ const initClickTariffs = () => {
     const span = items[i].querySelector('.phone__name-tariff');
     const bookBtn = items[i].querySelector('.phone__book');
     const more = items[i].querySelector('.phone__more');
-    span.addEventListener('click', () => { openTariff(span, more) });
+    span.addEventListener('click', () => { openTariff(more) });
+    bookBtn.addEventListener('click', () => { console.log('ddd'); openModal(span.innerText); });
   }
 }
 

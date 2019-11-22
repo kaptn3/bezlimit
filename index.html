@@ -137,6 +137,21 @@
       </div>
     </div>
   </footer>
+  <div class="modal">
+    <div class="modal__inner">
+      <div class="modal__close" onclick="openModal()">
+        <img src="assets/img/icons/close.svg">
+      </div>
+      <form class="book-form">
+        <span class="book-form__note">Для бронирования этого номера оставьте ваше имя и телефон.</span>
+        <input class="book-form__input" type="text" name="name" placeholder="Ваше имя" required>
+        <input class="book-form__input" type="text" name="phone" placeholder="Ваш номер" required>
+        <input class="book-form__input" type="text" name="phone-book" hidden required>
+        <button class="book-form__btn">Отправить заявку</button>
+        <small class="book-form__small"><sup>*</sup> Настоящим подтверждаю, что я ознакомлен и <a href="privacy.pdf" target="_blank">согласен на обработку персональных данных</a>.</small>
+      </form>
+    </div>
+  </div>
   <script type="text/javascript" src="assets/js/numbers.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
