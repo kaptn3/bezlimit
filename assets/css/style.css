@@ -228,8 +228,8 @@ body {
   overflow-x: auto;
   width: 100%;
   background-color: #fff;
-  padding-bottom: 17px;
   margin-bottom: -17px;
+  flex-shrink: 0;
 }
 
 .phone__menu {
@@ -251,8 +251,7 @@ body {
   border-right: 1px solid var(--base);
   min-width: 220px;
   flex: 1;
-  padding-top: .8rem;
-  padding-bottom: 1.8rem;
+  padding: .8rem 0;
   cursor: pointer;
   color: var(--base);
   display: block;
