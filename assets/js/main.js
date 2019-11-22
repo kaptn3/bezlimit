@@ -141,9 +141,11 @@ const submitWantDealerForm = (e) => {
   e.preventDefault();
   const btn = e.target.querySelector('.get-form__btn');
   btn.innerText = 'Заявка отправлена!';
+  btn.disabled = true;
 
   setTimeout(() => {
     btn.innerText = 'Хочу стать дилером';
+    btn.disabled = false;
   }, 3000);
 }
 
