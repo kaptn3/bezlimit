@@ -86,7 +86,7 @@ const constructorModal = (phone) => {
         <input class="book-form__input" type="text" name="phone" placeholder="Ваш номер" required>
         ${inputUserPhone}
         <button class="book-form__btn">Отправить заявку</button>
-        <small class="book-form__small"><sup>*</sup> Настоящим подтверждаю, что я ознакомлен и <a href="privacy.pdf" target="_blank">согласен на обработку персональных данных</a>.</small>
+        <small class="book-form__small"><sup>*</sup> Настоящим подтверждаю, что я ознакомлен и <a href="privacy_policy.pdf" target="_blank">согласен на обработку персональных данных</a>.</small>
       </form>
     </div>
   </div>`;
