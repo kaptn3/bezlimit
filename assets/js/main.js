@@ -117,7 +117,8 @@ const initClickTariffs = () => {
     const span = items[i].querySelector('.phone__number');
     const bookBtn = items[i].querySelector('.phone__book');
     const more = items[i].querySelector('.phone__more');
-    span.addEventListener('click', () => { openTariff(more) });
+    const tariff = items[i].querySelector('.phone__name-tariff');
+    tariff.addEventListener('click', () => { openTariff(more); });
     bookBtn.addEventListener('click', () => { openModal(span.innerText); });
   }
 }
