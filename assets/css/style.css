@@ -148,7 +148,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.1rem 0;
-  margin-bottom: 1.5rem;
 }
 
 .phone__logotype {
@@ -176,12 +175,14 @@ body {
 .phone__list {
   list-style: none;
   padding: 0;
+  margin-top: 1.5rem;
 }
 
 .phone__item {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: .8rem;
 }
 
 .phone__name-tariff {
@@ -212,6 +213,7 @@ body {
   display: none;
   opacity: .7;
   line-height: 1;
+  margin-bottom: .2rem;
 }
 
 .phone__more_show {
