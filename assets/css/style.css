@@ -52,6 +52,12 @@ body {
   line-height: 1.5;
 }
 
+.header-number-box {
+  background: url(../img/bg-1.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .header {
   padding-top: 2em;
   padding-bottom: 4em;
@@ -73,7 +79,7 @@ body {
 }
 
 .header__title {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .numbers {
@@ -82,8 +88,10 @@ body {
 
 .numbers__phone {
   margin: 0 auto;
-  display: block;
-  margin-bottom: 3em;
+  max-width: 35.8rem;
+  height: 1711px;
+  background: url(../img/iphone_11.png) no-repeat center;
+  background-size: contain;
 }
 
 .numbers__get-btn {
@@ -112,6 +120,102 @@ body {
   height: 1px;
   width: 7em;
   background-color: #a670cf;
+}
+
+.phone {
+  padding: 2.3rem 2.5rem;
+  height: 100%;
+  font-family: Ubuntu;
+}
+
+.phone__box {
+  background-color: var(--base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 3rem;
+  overflow: hidden;
+  padding: 0 1.5rem;
+}
+
+.phone__bar {
+  background: url(../img/icons/status_bar.svg) no-repeat center;
+  height: 2rem;
+}
+
+.phone__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.phone__logotype {
+  height: 4rem;
+}
+
+.phone__title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.phone__content {
+  height: 100%;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.phone__number {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.phone__list {
+  list-style: none;
+  padding: 0;
+}
+
+.phone__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.phone__name-tariff {
+  opacity: .7;
+  border-bottom: 1px dashed;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: .5em;
+}
+
+.phone__info-icon {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background: url(../img/icons/info.png) no-repeat center;
+  background-size: contain;
+  vertical-align: text-top;
+  margin-left: .5em;
+}
+
+.phone__book {
+  border: 1px solid #fff;
+  padding: .5rem 1rem;
+  font-size: inherit;
+}
+
+.phone__more {
+  display: none;
+  opacity: .7;
+  line-height: 1;
+}
+
+.phone__more_show {
+  display: block;
 }
 
 .plus {
@@ -219,14 +323,10 @@ body {
 .get-form__input {
   font-size: 1rem;
   padding: 0.6em 1em;
-  width: 17em;
-  margin-right: 2em;
+  width: 31.5%;
+  margin-right: 4%;
   border-radius: 4px;
   border: none;
-}
-
-.get-form__input:first-of-type {
-  margin-right: 1.5em;
 }
 
 .get-form__btn {
@@ -235,7 +335,7 @@ body {
   font-weight: 400;
   display: inline-block;
   padding: .6em;
-  width: 15em;
+  width: 27.8%;
   border-radius: 2em;
 }
 
@@ -311,7 +411,6 @@ body {
 .carousel__box {
   width: fit-content;
   display: flex;
-  transform: translateX(-60.5rem);
 }
 
 .carousel__box_animate {
@@ -323,10 +422,6 @@ body {
   height: 18.75rem;
   opacity: .5;
   transition: .5s opacity;
-}
-
-.carousel__item_animate {
-  
 }
 
 .carousel__item img {

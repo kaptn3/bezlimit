@@ -65,7 +65,7 @@ const openTariff = (span, more) => {
 const initClickTariffs = () => {
   const items = document.querySelectorAll('.phone__item');
   for (let i = 0; i < items.length; i++) {
-    const span = items[i].querySelector('.phone__number');
+    const span = items[i].querySelector('.phone__name-tariff');
     const bookBtn = items[i].querySelector('.phone__book');
     const more = items[i].querySelector('.phone__more');
     span.addEventListener('click', () => { openTariff(span, more) });
