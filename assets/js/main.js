@@ -66,10 +66,10 @@ const constructorModal = (phone) => {
   let note = '', inputUserPhone = '';
 
   if (phone) {
-    inputUserPhone = `<input class="book-form__input" type="text" name="phone-book" value="${phone}" hidden>`;
+    inputUserPhone = `<input class="book-form__input" type="tel" name="phone-book" value="${phone}" hidden>`;
     note = '<span class="book-form__note">Для бронирования этого номера оставьте ваше имя и телефон.</span>';
   } else {
-    inputUserPhone = '<input class="book-form__input" type="text" name="phone-text" placeholder="Ваш номер" required>';
+    note = '<span class="book-form__note">Для получения доступа к номерам оставьте ваше имя и телефон.</span>';
   }
 
   const modal = document.createElement('div');
@@ -83,7 +83,7 @@ const constructorModal = (phone) => {
       <form class="book-form" onsubmit="submitBookForm(event)">
         ${note}
         <input class="book-form__input" type="text" name="name" placeholder="Ваше имя" required>
-        <input class="book-form__input" type="text" name="phone" placeholder="Ваш номер" required>
+        <input class="book-form__input" type="tel" name="phone" placeholder="Ваш номер" data-type="tel" required>
         ${inputUserPhone}
         <button class="book-form__btn">Отправить заявку</button>
         <small class="book-form__small"><sup>*</sup> Настоящим подтверждаю, что я ознакомлен и <a href="privacy_policy.pdf" target="_blank">согласен на обработку персональных данных</a>.</small>
@@ -107,6 +107,7 @@ const openModal = (phone, e) => {
       modal.remove();
     } else {
       document.body.append(constructorModal(phone));
+      initPhoneMasks();
     }
   }
 }
@@ -150,6 +151,17 @@ const submitWantDealerForm = (e) => {
   }, 3000);
 }
 
+const initPhoneMasks = () => {
+  const inputs = document.querySelectorAll('input[data-type="tel"]');
+  for (let i = 0; i < inputs.length; i++) {
+    let maskOption = {
+      mask: '+{7} (000) 000-00-00'
+    }
+    const mask = IMask(inputs[i], maskOption);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', initCarousel);
 document.addEventListener('DOMContentLoaded', initClickTariffs);
 document.addEventListener('DOMContentLoaded', initPhoneMenu);
+document.addEventListener('DOMContentLoaded', initPhoneMasks);
