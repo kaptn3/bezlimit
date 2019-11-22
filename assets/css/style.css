@@ -75,11 +75,12 @@ body {
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 1em;
-  display: inline-block;
+  display: block;
 }
 
 .header__title {
   font-weight: 500;
+  font-size: 2rem;
 }
 
 .numbers {
@@ -89,7 +90,7 @@ body {
 .numbers__phone {
   margin: 0 auto;
   margin-bottom: 3.5rem;
-  max-width: 35.8rem;
+  max-width: 860px;
   height: 1711px;
   background: url(../img/iphone_11.png) no-repeat center;
   background-size: contain;
@@ -124,7 +125,7 @@ body {
 }
 
 .phone {
-  padding: 2.3rem 2.5rem;
+  padding: 2.3rem;
   height: 100%;
   font-family: Ubuntu;
 }
