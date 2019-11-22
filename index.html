@@ -79,7 +79,7 @@
     <h2 class="get-form__title">Получи доступ к Базе номеров прямо сейчас</h2>
     <span class="get-form__action-text">Введи имя и номер телефона и получи логин и пароль</span>
     <form class="get-form__form" onsubmit="submitWantDealerForm(event)">
-      <input type="text" name="name" class="get-form__input" placeholder="Ваше имя" required>
+      <input type="text" name="name" class="get-form__input" pattern="[а-яА-Я]+" data-type="name" placeholder="Ваше имя" required>
       <input type="tel" name="phone" class="get-form__input" placeholder="Ваш номер" data-type="tel" required>
       <button class="get-form__btn">Хочу стать дилером</button>
     </form>

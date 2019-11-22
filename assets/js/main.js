@@ -82,7 +82,7 @@ const constructorModal = (phone) => {
       </div>
       <form class="book-form" onsubmit="submitBookForm(event)">
         ${note}
-        <input class="book-form__input" type="text" name="name" placeholder="Ваше имя" required>
+        <input class="book-form__input" type="text" name="name" placeholder="Ваше имя" pattern="[а-яА-Я]+" data-type="name" required>
         <input class="book-form__input" type="tel" name="phone" placeholder="Ваш номер" data-type="tel" required>
         ${inputUserPhone}
         <button class="book-form__btn">Отправить заявку</button>
@@ -107,7 +107,7 @@ const openModal = (phone, e) => {
       modal.remove();
     } else {
       document.body.append(constructorModal(phone));
-      initPhoneMasks();
+      initInputMasks();
     }
   }
 }
@@ -151,7 +151,7 @@ const submitWantDealerForm = (e) => {
   }, 3000);
 }
 
-const initPhoneMasks = () => {
+const initInputMasks = () => {
   const inputs = document.querySelectorAll('input[data-type="tel"]');
   for (let i = 0; i < inputs.length; i++) {
     let maskOption = {
@@ -159,9 +159,17 @@ const initPhoneMasks = () => {
     }
     const mask = IMask(inputs[i], maskOption);
   }
+
+  const nameInputs = document.querySelectorAll('input[data-type="name"]');
+  for (let i = 0; i < nameInputs.length; i++) {
+    let maskOption = {
+      mask: '[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]'
+    }
+    const mask = IMask(nameInputs[i], maskOption);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initCarousel);
 document.addEventListener('DOMContentLoaded', initClickTariffs);
 document.addEventListener('DOMContentLoaded', initPhoneMenu);
-document.addEventListener('DOMContentLoaded', initPhoneMasks);
+document.addEventListener('DOMContentLoaded', initInputMasks);
