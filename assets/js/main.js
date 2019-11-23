@@ -135,6 +135,14 @@ const initPhoneMenu = () => {
   }
 }
 
+const clearForm = (div) => {
+  const inputs = div.querySelectorAll('input');
+
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].value = '';
+  }
+}
+
 const submitBookForm = (e) => {
   e.preventDefault();
   e.target.innerHTML = 'Заявка отправлена. Мы свяжемся с Вами в ближайшее рабочее время!';
@@ -145,6 +153,8 @@ const submitWantDealerForm = (e) => {
   const btn = e.target.querySelector('.get-form__btn');
   btn.innerText = 'Заявка отправлена!';
   btn.disabled = true;
+
+  clearForm(e.target);
 
   setTimeout(() => {
     btn.innerText = 'Хочу стать дилером';
