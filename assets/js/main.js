@@ -149,7 +149,7 @@ const submitWantDealerForm = (e) => {
   setTimeout(() => {
     btn.innerText = 'Хочу стать дилером';
     btn.disabled = false;
-  }, 3000);
+  }, 60000);
 }
 
 const initInputMasks = () => {
