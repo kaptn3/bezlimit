@@ -84,7 +84,7 @@ const constructorModal = (phone) => {
       <form class="book-form" onsubmit="submitBookForm(event)">
         ${note}
         <input class="book-form__input" type="text" name="name" placeholder="Ваше имя" pattern="[а-яА-Я]+" data-type="name" required>
-        <input class="book-form__input" type="tel" name="phone" placeholder="Ваш номер" data-type="tel" required>
+        <input class="book-form__input" type="tel" minlength="18" name="phone" placeholder="Ваш номер" data-type="tel" required>
         ${inputUserPhone}
         <button class="book-form__btn">Отправить заявку</button>
         <small class="book-form__small"><sup>*</sup> Настоящим подтверждаю, что я ознакомлен и <a href="privacy_policy.pdf" target="_blank">согласен на обработку персональных данных</a>.</small>
