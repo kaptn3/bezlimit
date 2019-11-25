@@ -128,6 +128,7 @@
 
   .phone__book {
     padding: .3rem;
+    font-size: inherit;
   }
 
   .phone__title {
