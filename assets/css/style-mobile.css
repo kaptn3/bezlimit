@@ -67,6 +67,10 @@
     display: none;
   }
 
+  .phone__more br {
+    display: inline;
+  }
+
   .header {
     padding-top: 1rem;
     padding-bottom: 2rem;
