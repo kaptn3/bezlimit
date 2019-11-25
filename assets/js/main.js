@@ -127,7 +127,6 @@ const initClickTariffs = () => {
 
 const activePhoneMenuItemHandle = (active, links) => {
   const div = document.querySelector('.phone__menu-item-active');
-  div.style.width = `${links[active].offsetWidth}px`;
   div.style.left = `${active * links[active].offsetWidth}px`;
 }
 
