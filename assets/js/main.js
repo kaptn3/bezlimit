@@ -125,14 +125,26 @@ const initClickTariffs = () => {
   }
 }
 
+const activePhoneMenuItemHandle = (active, links) => {
+  const div = document.querySelector('.phone__menu-item-active');
+  div.style.width = `${links[active].offsetWidth}px`;
+  div.style.left = `${active * links[active].offsetWidth}px`;
+}
+
 const initPhoneMenu = () => {
   const links = document.querySelectorAll('.phone__menu-item');
-  const div = document.querySelector('.phone__menu-item-active');
+  let active = 0;
+  activePhoneMenuItemHandle(active, links);
+
   for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', () => {
-      div.style.left = `${i * links[i].offsetWidth}px`;
+      active = i;
+      activePhoneMenuItemHandle(active, links);
     });
   }
+  window.addEventListener('resize', () => {
+    activePhoneMenuItemHandle(active, links);
+  });
 }
 
 const clearForm = (div) => {
