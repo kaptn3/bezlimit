@@ -139,26 +139,8 @@
     background-size: 85% auto;
   }
 
-  .phone__content {
-    font-size: 9px;
-  }
-
-  .phone__number {
-    font-size: 14px;
-  }
-
   .phone__menu-item {
-    font-size: 9px;
     min-width: 80px;
-    padding: .4rem 0;
-  }
-
-  .phone__menu-item-active {
-    width: 80px;
-  }
-
-  .phone__menu-item::before {
-    height: 1rem;
   }
 
   .be-dealer__title {
@@ -295,6 +277,26 @@
 
   .phone__box {
     border-radius: 2rem;
+  }
+}
+
+@media (max-width: 446px) {
+  .phone__content {
+    font-size: 9px;
+  }
+
+  .phone__number {
+    font-size: 14px;
+  }
+
+  .phone__menu-item {
+    font-size: 9px;
+    min-width: 80px;
+    padding: .4rem 0;
+  }
+
+  .phone__menu-item::before {
+    height: 1rem;
   }
 }
 
