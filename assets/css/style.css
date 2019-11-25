@@ -251,10 +251,20 @@ body {
   overflow-x: auto;
   width: 100%;
   background-color: #fff;
-  padding-bottom: 15px;
-  margin-bottom: -17px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.phone__menu-box::-webkit-scrollbar { 
+    display: none;
 }
 
 .phone__menu {
@@ -288,6 +298,10 @@ body {
   cursor: pointer;
   color: var(--base);
   display: block;
+}
+
+li:first-child .phone__menu-item {
+  border-left: 1px solid var(--base);
 }
 
 .phone__menu-item-active {
