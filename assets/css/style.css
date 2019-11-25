@@ -255,12 +255,6 @@ body {
       flex-shrink: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .phone__menu-box::-webkit-scrollbar { 
@@ -274,14 +268,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   list-style: none;
   text-align: center;
   font-size: 1rem;
   padding: 0;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 
 .phone__menu li {
