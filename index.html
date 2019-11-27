@@ -83,7 +83,7 @@
     <span class="get-form__action-text">Введи имя и номер телефона и получи логин и пароль</span>
     <form class="get-form__form" onsubmit="submitWantDealerForm(event)">
       <input type="text" name="name" class="get-form__input" pattern="[а-яА-Я]+" data-type="name" placeholder="Ваше имя" required>
-      <input type="tel" name="phone" class="get-form__input" placeholder="Ваш номер" data-type="tel" minlength="18" required>
+      <input type="tel" name="phone" class="get-form__input" placeholder="Ваш номер" data-type="tel" minlength="18" pattern=".{18,18}" required>
       <button class="get-form__btn">Хочу стать дилером</button>
       <small class="get-form__small"><sup>*</sup>Оставляя заявку подтверждаю, что я ознакомлен и <a href="privacy_policy.pdf" target="_blank" class="get-form__privacy-link">согласен на обработку персональных данных</a>.</small>
     </form>

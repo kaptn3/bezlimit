@@ -84,7 +84,7 @@ const constructorModal = (phone) => {
       <form class="book-form" onsubmit="submitBookForm(event)">
         ${note}
         <input class="book-form__input" type="text" name="name" placeholder="Ваше имя" pattern="[а-яА-Я]+" data-type="name" required>
-        <input class="book-form__input" type="tel" minlength="18" name="phone" placeholder="Ваш номер" data-type="tel" required>
+        <input class="book-form__input" type="tel" minlength="18" pattern=".{18,18}" minlength="18" name="phone" placeholder="Ваш номер" data-type="tel" required>
         ${inputUserPhone}
         <button class="book-form__btn">Отправить заявку</button>
         <small class="book-form__small"><sup>*</sup> Настоящим подтверждаю, что я ознакомлен и <a href="privacy_policy.pdf" target="_blank">согласен на обработку персональных данных</a>.</small>
@@ -154,7 +154,7 @@ const clearForm = (div) => {
   }
 }
 
-const minLenghthForInput = (input) => {
+const minLenghthForInput = (input, form) => {
   if (input.value.length >= 18) {
     input.removeAttribute('style');
     return true;
@@ -174,7 +174,7 @@ const submitBookForm = (e) => {
 
 const submitWantDealerForm = (e) => {
   e.preventDefault();
-  const check = minLenghthForInput(e.target.querySelector('input[data-type="tel"'));
+  const check = minLenghthForInput(e.target.querySelector('input[data-type="tel"'), e.target);
   if (check) {
     const btn = e.target.querySelector('.get-form__btn');
     btn.innerText = 'Заявка отправлена!';
