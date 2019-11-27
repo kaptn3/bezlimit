@@ -154,7 +154,7 @@ const clearForm = (div) => {
   }
 }
 
-const minLenghthForInput = (input, form) => {
+const minLenghthForInput = (input) => {
   if (input.value.length >= 18) {
     input.removeAttribute('style');
     return true;
@@ -174,7 +174,7 @@ const submitBookForm = (e) => {
 
 const submitWantDealerForm = (e) => {
   e.preventDefault();
-  const check = minLenghthForInput(e.target.querySelector('input[data-type="tel"'), e.target);
+  const check = minLenghthForInput(e.target.querySelector('input[data-type="tel"'));
   if (check) {
     const btn = e.target.querySelector('.get-form__btn');
     btn.innerText = 'Заявка отправлена!';
