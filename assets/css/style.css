@@ -690,11 +690,9 @@ li:first-child .phone__menu-item {
   z-index: 999;
 }
 
-.modal_show {
-}
-
 .modal__inner {
-  width: 482px;
+  width: 100%;
+  max-width: 600px;
   background-color: #441e70;
   border: 1px solid #b761ed;
   margin: auto;
