@@ -154,23 +154,39 @@ const clearForm = (div) => {
   }
 }
 
+const minLenghthForInput = (input) => {
+  if (input.value.length >= 18) {
+    input.removeAttribute('style');
+    return true;
+  } else {
+    input.style.boxShadow = '0 0 0 3px var(--red)';
+  }
+  return false;
+}
+
 const submitBookForm = (e) => {
   e.preventDefault();
-  e.target.innerHTML = 'Заявка отправлена. Мы свяжемся с Вами в ближайшее рабочее время!';
+  const check = minLenghthForInput(e.target.querySelector('input[data-type="tel"'));
+  if (check) {
+    e.target.innerHTML = 'Заявка отправлена. Мы свяжемся с Вами в ближайшее рабочее время!';
+  }
 }
 
 const submitWantDealerForm = (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('.get-form__btn');
-  btn.innerText = 'Заявка отправлена!';
-  btn.disabled = true;
+  const check = minLenghthForInput(e.target.querySelector('input[data-type="tel"'));
+  if (check) {
+    const btn = e.target.querySelector('.get-form__btn');
+    btn.innerText = 'Заявка отправлена!';
+    btn.disabled = true;
 
-  clearForm(e.target);
+    clearForm(e.target);
 
-  setTimeout(() => {
-    btn.innerText = 'Хочу стать дилером';
-    btn.disabled = false;
-  }, 60000);
+    setTimeout(() => {
+      btn.innerText = 'Хочу стать дилером';
+      btn.disabled = false;
+    }, 60000);
+  }
 }
 
 const initInputMasks = () => {
