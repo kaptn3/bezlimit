@@ -171,6 +171,7 @@ const hideErrorMessageHandle = (input) => {
     input.focus();
     input.removeAttribute('onmousedown');
     input.removeAttribute('onkeypress');
+    input.removeAttribute('onkeydown');
   }, 10);
 }
 
@@ -179,6 +180,7 @@ const validationHandle = (e) => {
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].setAttribute('onmousedown', 'hideErrorMessageHandle(this)');
     inputs[i].setAttribute('onkeypress', 'hideErrorMessageHandle(this)');
+    inputs[i].setAttribute('onkeydown', 'hideErrorMessageHandle(this)');
   }
 }
 
