@@ -185,7 +185,6 @@ const validationHandle = (e) => {
 const submitBookForm = (e) => {
   e.preventDefault();
   const check = minLenghthForInput(e.target.querySelector('input[data-type="tel"'));
-  int.setCustomValidity('');
   if (check) {
     e.target.innerHTML = 'Заявка отправлена. Мы свяжемся с Вами в ближайшее рабочее время!';
   }
