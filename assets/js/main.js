@@ -86,7 +86,7 @@ const constructorModal = (phone) => {
         <input class="book-form__input" type="text" name="name" placeholder="Ваше имя" pattern="[а-яА-Я]+" data-type="name" required>
         <input class="book-form__input" type="tel" pattern=".{18,18}" minlength="18" name="phone" placeholder="Ваш номер" data-type="tel" required>
         ${inputUserPhone}
-        <button class="book-form__btn">Отправить заявку</button>
+        <button class="book-form__btn" onclick="validationHandle(event)">Отправить заявку</button>
         <small class="book-form__small"><sup>*</sup> Настоящим подтверждаю, что я ознакомлен и <a href="privacy_policy.pdf" target="_blank">согласен на обработку персональных данных</a>.</small>
       </form>
     </div>
@@ -164,9 +164,28 @@ const minLenghthForInput = (input) => {
   return false;
 }
 
+const hideErrorMessageHandle = (input) => {
+  input.blur();
+
+  setTimeout(() => {
+    input.focus();
+    input.removeAttribute('onmousedown');
+    input.removeAttribute('onkeypress');
+  }, 10);
+}
+
+const validationHandle = (e) => {
+  const inputs = e.path[1].querySelectorAll('input');
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].setAttribute('onmousedown', 'hideErrorMessageHandle(this)');
+    inputs[i].setAttribute('onkeypress', 'hideErrorMessageHandle(this)');
+  }
+}
+
 const submitBookForm = (e) => {
   e.preventDefault();
   const check = minLenghthForInput(e.target.querySelector('input[data-type="tel"'));
+  int.setCustomValidity('');
   if (check) {
     e.target.innerHTML = 'Заявка отправлена. Мы свяжемся с Вами в ближайшее рабочее время!';
   }
